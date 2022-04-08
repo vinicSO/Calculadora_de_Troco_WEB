@@ -1,0 +1,31 @@
+#areaTitulo {
+    padding: 50px;
+}
+
+#areaValorTotal, #areaValorRecebido {
+    padding: 20px;
+}
+
+#areaValorTroco {
+    text-align: center;
+    padding: 50px;
+}
+
+.col {
+    text-align: center;
+}
+
+input {
+    border: transparent;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+}
