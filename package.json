@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/vinicSO/Calculadora_de_Troco_WEB/issues"
   },
-  "homepage": "https://github.com/vinicSO/Calculadora_de_Troco_WEB#readme"
+  "homepage": "https://github.com/vinicSO/Calculadora_de_Troco_WEB#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "inputmask": "^5.0.7",
+    "nodemon": "^2.0.15"
+  }
 }

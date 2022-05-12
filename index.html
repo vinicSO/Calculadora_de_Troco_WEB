@@ -8,7 +8,11 @@
         <title>Calculadora de Troco</title>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="container">
@@ -20,12 +24,12 @@
         <div class="row">
             <div id="areaValorTotal" class="col d-flex flex-column mb-3">
                 <span>Valor Total</span>
-                <input id="valorTotal" type="number" placeholder="0,00">
+                <input id="valorTotal" type="text" placeholder="0,00" onkeydown="$(this).mask('000.000,00', {reverse: true});">
             </div>
 
             <div id="areaValorRecebido" class="col d-flex flex-column mb-3">
                 <span>Valor Recebido</span>
-                <input id="valorRecebido" type="number" placeholder="0,00">
+                <input id="valorRecebido" type="text" placeholder="0,00" onkeydown="$(this).mask('000.000,00', {reverse: true});">
             </div>
         </div>
 
@@ -33,7 +37,7 @@
         <div class="position-relative" style="height: 200px;">
             <div id="areaValorTroco" class="position-absolute top-50 start-50 translate-middle d-flex flex-column mb-3">
                 <span>Troco</span>
-                <input id="troco" class="border border-3 rounded-pill" id="Troco" readonly placeholder="0,00">
+                <input id="troco" class="border border-3 rounded-pill" id="Troco" readonly placeholder="0.00" type="text" placeholder="0,00">
             </div>
         </div>
         
