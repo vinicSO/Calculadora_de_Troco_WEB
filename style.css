@@ -6,9 +6,20 @@
     padding: 20px;
 }
 
+#areaTroco {
+    align-items: center;
+}
+
 #areaValorTroco {
     text-align: center;
-    padding: 50px;
+}
+
+#alertaValor {
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color:red;
 }
 
 .col {

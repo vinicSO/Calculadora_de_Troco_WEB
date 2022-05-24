@@ -10,24 +10,17 @@ function calcularTroco() {
         return;
     }
 
-    //troco.value = valorRecebido.value-valorTotal.value;
+    let valor = enxutar(valorRecebido.value)/100-enxutar(valorTotal.value)/100;
 
-    troco.value = enxutar(valorRecebido.value)/100-enxutar(valorTotal.value)/100;
-    /*troco.value = enxutar(troco.value);
+    troco.value = valor;
 
-    $("#troco").mask('000.000,00', {reverse: true});
+    if (valor < 0) {
+        $("#alertaValor").removeClass("visually-hidden");
+    }
 
-    console.log($('#troco').val().mask('000.000,00', {reverse: true}))
-
-    //else troco.value = 
-
-    $(troco).mask('000.000,00', {reverse: true});
-    
-    /*console.log(enxutar(valorRecebido.value)/100)
-    console.log(enxutar(valorTotal.value)/100)
-    console.log(troco.value)*/
-
-    
+    else {
+        $("#alertaValor").addClass("visually-hidden");
+    }
 }
 
 function enxutar(i) {
@@ -70,8 +63,6 @@ function removerZeros(i) {
 
         if(b) r += letra;
     }
-
-    //console.log(r)
 
     if(r.length <= 2 && r.length != 0) return complementar(r);
 
