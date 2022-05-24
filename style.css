@@ -1,9 +1,18 @@
+#areaSysTroco {
+    margin: 20px;
+    background-color: rgb(245, 215, 215);
+    border-radius: 10px;
+}
+
 #areaTitulo {
     padding: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #areaValorTotal, #areaValorRecebido {
     padding: 20px;
+    align-items: center;
 }
 
 #areaTroco {
@@ -29,11 +38,11 @@
 input {
     border: transparent;
     text-align: center;
+    width: 215px;
 }
 
 input:focus {
     outline: none;
-
 }
 
 input[type=number]::-webkit-inner-spin-button,

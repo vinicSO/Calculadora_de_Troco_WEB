@@ -12,7 +12,7 @@ function calcularTroco() {
 
     let valor = enxutar(valorRecebido.value)/100-enxutar(valorTotal.value)/100;
 
-    troco.value = valor;
+    troco.value = valor.toFixed(2);
 
     if (valor < 0) {
         $("#alertaValor").removeClass("visually-hidden");

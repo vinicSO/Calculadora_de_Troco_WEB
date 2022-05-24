@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Calculadora de Troco</title>
+        <title>Sistema de Troco</title>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -17,36 +17,40 @@
     </head>
     <body class="container">
 
-        <div id="areaTitulo" class="position-relative">
-            <h1 class="position-absolute top-50 start-50 translate-middle">Sistema de Troco</h1>
-        </div>
-
-        <div class="row">
-            <div id="areaValorTotal" class="col d-flex flex-column mb-3">
-                <span>Valor Total</span>
-                <input id="valorTotal" type="text" placeholder="0,00" onkeydown="$(this).mask('000.000,00', {reverse: true});">
+        <main id="areaSysTroco">
+            <div id="areaTitulo" class="position-relative">
+                <h2 class="position-absolute top-50 start-50 translate-middle">CALCULADORA DE TROCO</h2>
             </div>
 
-            <div id="areaValorRecebido" class="col d-flex flex-column mb-3">
-                <span>Valor Recebido</span>
-                <input id="valorRecebido" type="text" placeholder="0,00" onkeydown="$(this).mask('000.000,00', {reverse: true});">
+            <div class="row">
+                <div id="areaValorTotal" class="col d-flex flex-column mb-3">
+                    <span>Valor Total</span>
+                    <input id="valorTotal" class="border border-3 rounded-pill" type="text" placeholder="0,00" onkeydown="$(this).mask('000.000,00', {reverse: true});">
+                </div>
+
+                <div id="areaValorRecebido" class="col d-flex flex-column mb-3">
+                    <span>Valor Recebido</span>
+                    <input id="valorRecebido" class="border border-3 rounded-pill" type="text" placeholder="0,00" onkeydown="$(this).mask('000.000,00', {reverse: true});">
+                </div>
             </div>
-        </div>
+
+            
+            <div id="areaTroco" class="position-relative" style="height: 200px;">
+                <div id="areaValorTroco">
+                    <span>Troco</span> </br>
+                    <input id="troco" class="border border-3 rounded-pill" readonly placeholder="0.00" type="text" placeholder="0,00">
+                </div>
+                <div id="alertaValor" class="visually-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-diamond" viewBox="0 0 16 16">
+                        <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </svg>
+                    <i class="bi bi-exclamation-diamond">Valor Recebido é inferior ao Total</i>
+                </div>
+            </div>
+        </main>
 
         
-        <div id="areaTroco" class="position-relative" style="height: 200px;">
-            <div id="areaValorTroco">
-                <span>Troco</span> </br>
-                <input id="troco" class="border border-3 rounded-pill" id="Troco" readonly placeholder="0.00" type="text" placeholder="0,00">
-            </div>
-            <div id="alertaValor" class="visually-hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-diamond" viewBox="0 0 16 16">
-                    <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
-                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-                </svg>
-                <i class="bi bi-exclamation-diamond">Valor Recebido é inferior ao Total</i>
-            </div>
-        </div>
         
 
         <script type="text/javascript" src="script.js"></script>
